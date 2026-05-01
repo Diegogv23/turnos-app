@@ -1,3 +1,11 @@
 spring:
   application:
-    name: backend
+    name: turnos-app
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: turnosdb
+
+server:
+  port: 8080
