@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: -20%;
+  background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.3) 0%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero__pretitle {
+  font-family: var(--fuente-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--dorado);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero__title {
+  font-family: var(--fuente-serif);
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 300;
+  color: var(--marfil);
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.hero__subtitle {
+  font-family: var(--fuente-sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--texto-claro);
+  line-height: 2;
+  margin-bottom: 3rem;
+}
+
+.hero__divider {
+  width: 60px;
+  height: 1px;
+  background: var(--dorado);
+  margin: 0 auto 3rem;
+}
+
+.hero__btn {
+  font-family: var(--fuente-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--negro);
+  background: var(--dorado);
+  padding: 1rem 3rem;
+  transition: var(--transicion);
+  display: inline-block;
+}
+
+.hero__btn:hover {
+  background: var(--dorado-claro);
+  color: var(--negro);
+  transform: translateY(-2px);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 2;
+}
+
+.hero__scroll span {
+  font-family: var(--fuente-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--dorado);
+  text-transform: uppercase;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--dorado), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
