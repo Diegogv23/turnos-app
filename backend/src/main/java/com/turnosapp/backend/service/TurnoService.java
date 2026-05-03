@@ -67,4 +67,12 @@ public class TurnoService {
             return true;
         }).orElse(false);
     }
+
+    public boolean eliminar(String id) {
+    return turnoRepository.findById(id).map(turno -> {
+        turnoRepository.deleteById(id);
+        return true;
+    }).orElse(false);
+}
+
 }

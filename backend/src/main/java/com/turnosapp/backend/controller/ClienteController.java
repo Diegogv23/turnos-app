@@ -72,4 +72,11 @@ public class ClienteController {
                 ? ResponseEntity.noContent().build()
                 : ResponseEntity.notFound().build();
     }
+
+    @DeleteMapping("/{id}/eliminar")
+    public ResponseEntity<Void> eliminar(@PathVariable String id) {
+        return clienteService.eliminar(id)
+                ? ResponseEntity.noContent().build()
+                : ResponseEntity.notFound().build();
+    }
 }

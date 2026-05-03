@@ -68,4 +68,11 @@ public class ClienteService {
             return true;
         }).orElse(false);
     }
+
+    public boolean eliminar(String id) {
+    return clienteRepository.findById(id).map(cliente -> {
+        clienteRepository.deleteById(id);
+        return true;
+    }).orElse(false);
+}
 }

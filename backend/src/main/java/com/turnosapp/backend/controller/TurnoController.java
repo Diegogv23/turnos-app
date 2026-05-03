@@ -78,4 +78,11 @@ public class TurnoController {
                 ? ResponseEntity.noContent().build()
                 : ResponseEntity.notFound().build();
     }
+
+    @DeleteMapping("/{id}/eliminar")
+    public ResponseEntity<Void> eliminar(@PathVariable String id) {
+        return turnoService.eliminar(id)
+                ? ResponseEntity.noContent().build()
+                : ResponseEntity.notFound().build();
+    }
 }
