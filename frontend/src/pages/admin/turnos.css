@@ -1,0 +1,245 @@
+.turnos__cargando {
+  color: var(--dorado);
+  font-family: var(--fuente-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 4rem;
+}
+
+.turnos__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.turnos__pretitle {
+  font-family: var(--fuente-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--dorado);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.turnos__title {
+  font-family: var(--fuente-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--marfil);
+}
+
+.turnos__divider {
+  width: 60px;
+  height: 1px;
+  background: var(--dorado);
+  margin-top: 1rem;
+}
+
+.turnos__contador {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.turnos__contador-num {
+  font-family: var(--fuente-serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--dorado);
+  line-height: 1;
+}
+
+.turnos__contador-label {
+  font-family: var(--fuente-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--texto-claro);
+  text-transform: uppercase;
+}
+
+.turnos__filtros {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filtro__btn {
+  background: none;
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  color: var(--texto-claro);
+  padding: 0.5rem 1.2rem;
+  font-family: var(--fuente-sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.filtro__btn:hover {
+  border-color: var(--dorado);
+  color: var(--dorado);
+}
+
+.filtro__btn--active {
+  background: rgba(201, 169, 110, 0.1);
+  border-color: var(--dorado);
+  color: var(--dorado);
+}
+
+.turnos__tabla {
+  background: var(--negro-suave);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  overflow-x: auto;
+}
+
+.turnos__tabla-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1.5fr 1.2fr 1.5fr;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+  font-family: var(--fuente-sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--dorado);
+  text-transform: uppercase;
+  min-width: 900px;
+}
+
+.turnos__fila {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1.5fr 1.2fr 1.5fr;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.08);
+  align-items: center;
+  transition: var(--transicion);
+  min-width: 900px;
+}
+
+.turnos__fila:hover {
+  background: rgba(201, 169, 110, 0.03);
+}
+
+.turnos__cell {
+  font-family: var(--fuente-sans);
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--texto-claro);
+}
+
+.turnos__cell small {
+  font-size: 0.68rem;
+  opacity: 0.6;
+}
+
+.turnos__cell--notas {
+  font-size: 0.72rem;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.turno__estado {
+  font-family: var(--fuente-sans);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+.turno__estado--pendiente {
+  color: #e8c56e;
+  border: 1px solid rgba(232, 197, 110, 0.3);
+}
+
+.turno__estado--confirmado {
+  color: #6ec87a;
+  border: 1px solid rgba(110, 200, 122, 0.3);
+}
+
+.turno__estado--cancelado {
+  color: #e07070;
+  border: 1px solid rgba(224, 112, 112, 0.3);
+}
+
+.turno__estado--completado {
+  color: var(--texto-claro);
+  border: 1px solid rgba(212, 197, 169, 0.3);
+}
+
+.turnos__acciones {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.accion__btn {
+  background: none;
+  border: 1px solid;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--fuente-sans);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.accion__btn--confirmar {
+  border-color: rgba(110, 200, 122, 0.4);
+  color: #6ec87a;
+}
+
+.accion__btn--confirmar:hover {
+  background: rgba(110, 200, 122, 0.1);
+}
+
+.accion__btn--completar {
+  border-color: rgba(201, 169, 110, 0.4);
+  color: var(--dorado);
+}
+
+.accion__btn--completar:hover {
+  background: rgba(201, 169, 110, 0.1);
+}
+
+.accion__btn--cancelar {
+  border-color: rgba(224, 112, 112, 0.4);
+  color: #e07070;
+}
+
+.accion__btn--cancelar:hover {
+  background: rgba(224, 112, 112, 0.1);
+}
+
+.accion__btn--eliminar {
+  border-color: rgba(150, 150, 150, 0.3);
+  color: var(--texto-claro);
+}
+
+.accion__btn--eliminar:hover {
+  background: rgba(150, 150, 150, 0.1);
+}
+
+.turnos__vacio {
+  padding: 3rem;
+  text-align: center;
+  font-family: var(--fuente-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--texto-claro);
+  opacity: 0.5;
+}
